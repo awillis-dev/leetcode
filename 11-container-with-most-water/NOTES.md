@@ -8,8 +8,8 @@
   - set max area to maximum number between curr area and max area
 ​
 - if p1 < = p2:
-- p1 increments
--else:
-- p2 decrements
+  - p1 increments
+  -else:
+  - p2 decrements
 ​
 return max area
