@@ -4,22 +4,19 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-    if(s.length !== t.length) {
-		return false
-	}
-
-	let countS = {};
-	let countT = {};
     
-	for(let i = 0; i < s.length; i++) {
-		countS[s[i]] = (countS[s[i]] || 0) + 1
-		countT[t[i]] = (countT[t[i]] || 0) + 1
-	}
+    s = s.split("").sort()
+  t = t.split("").sort()
+  
+  if(s.length !== t.length) {
+    return false
+  }
 
-	for(let char in countS) {
-		if(countS[char] !== countT[char]) {
-			return false
-		}
-	}
-	return true
+  for(let i = 0; i < s.length; i++) {
+    if(s[i] !== t[i]) {
+      return false
+    }
+  }
+
+  return true
 };
